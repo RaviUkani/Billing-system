@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+            th, td {
+                background-color: pink;
+              }
+            </style>
+    </head>
+    <body>
+        <h1>Welcome to the item page</h1>
+        <table style = 'width:100%'>
+        <thead>
+            <th>Item ID</th>
+            <th>Item name</th>
+            <th>Item price</th> 
+            <th>item price</th>
+        </thead>
+        <tbody>
+            {% for item  in items %}
+                    <tr>
+                        <td>{{item.id}}</td>
+                        <td>{{item.item_name}}</td>
+                        <td>{{item.item_price}}</td>
+                        <td>{{item.item_quantity}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

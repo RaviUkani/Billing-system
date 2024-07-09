@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+            background-color: #96D4D4;
+          }
+        </style>
+</head>
+<body>
+    <center>
+        <h3> Order Id </h3>
+        <table style = "width= 100%">
+            <thead>
+                <th>customer Name</th>
+                <th>customer order date</th>
+                <th>customer customer address</th> 
+                <th>customer phone</th>
+                <th>customer item quantity</th>
+                <th>customer item name</th>
+                <th>customer item price</th>
+            </thead>
+            <tbody>
+                <td rowspan="5">{{ customer.costomer_name }}</td>
+                <td rowspan="5">{{ order.order_date }}</td>
+                <td rowspan="5">{{ customer.costomer_address }}</td>
+                <td rowspan="5">{{ customer.costomer_phone }}</td>
+               
+                {% for item in item %}
+                <tr>
+                   
+                        <td>{{ item.item_quantity}}</td>
+                        <td>{{ item.item_name }}</td>
+                        <td>{{ item.item_price }}</td>
+                        
+                </tr>
+                
+                {% endfor %}
+                <td colspan="2"><center><b>Totle </center></td>
+                <td>{{total}}</td>
+            </tbody>
+        </table>
+    </center>
