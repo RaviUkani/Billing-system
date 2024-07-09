@@ -1,0 +1,8 @@
+/db.sqlite3
+/manage.py
+Invoice/__pycache__/
+Invoice/asgi.py
+Invoice/wsgi.py
+Invoice/settings.py
+__pycache__/
+migrations/
